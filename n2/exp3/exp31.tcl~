@@ -1,0 +1,19 @@
+set ns [ nnew Simulator ]
+set tf [ open lab3a.tr w ]
+$ns trace-all $tf
+
+set nf [ open lab3a.nam w ]
+$ns namtrace-all $nf
+
+set file1 [ open conn1.tr w ]
+set file2 [ open conn2.tr w ]
+
+set n0 [ $ns node ]
+set n2 [ $ns node ]
+set n3 [ $ns node ]
+
+$ns color 1 "red"
+$ns color 2 "green"
+$ns color 3 "blue"
+
+$ns make-lan "$n0 $n1 $n2 
